@@ -38,9 +38,8 @@ syn match markdownBlockquote ">\s" contained nextgroup=@markdownBlock
 syn region markdownCodeBlock start="    \|\t" end="$" contained
 
 " TODO: real nesting
-syn match markdownListMarker " \{0,4\}[-*+]\%(\s\+\S\)\@=" contained
-syn match markdownOrderedListMarker " \{0,4}\<\d\+\.\%(\s*\S\)\@=" contained
-
+syn match markdownListMarker "^ *[-*+]\%(\s\+\S\)\@=" contained contains=@markdownInline
+syn match markdownOrderedListMarker "^ *\<\d\+\.\%(\s*\S\)\@=" contained contains=@markdownInline
 syn match markdownRule "\* *\* *\*[ *]*$" contained
 syn match markdownRule "- *- *-[ -]*$" contained
 
