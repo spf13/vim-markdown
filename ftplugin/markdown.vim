@@ -12,6 +12,7 @@ unlet! b:did_ftplugin
 setlocal comments=fb:*,fb:-,fb:+,n:> commentstring=>\ %s
 setlocal formatoptions+=tcqln
 setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\|^[-*+]\\s\\+
+setlocal expandtab
 
 let b:undo_ftplugin .= "|setl cms< com< fo<"
 
